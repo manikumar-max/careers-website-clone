@@ -829,6 +829,72 @@ ul {
 }
 
 /* ==========================================================================
+   14. ULTRA-MICRO VIEWPORT RESPONSIVE SYSTEM (Below 350px)
+   ========================================================================== */
+
+@media (max-width: 350px) {
+
+    /* --- 1. JOB LISTING CARDS ADJUSTMENTS --- */
+    .job-row-card {
+        padding: 1.5rem 0.5rem;
+        /* Tighten card cushions to maximize available screen real estate */
+        gap: 15px;
+    }
+
+    .job-left-meta {
+        gap: 15px;
+        /* Pull the company logo closer to the text details */
+    }
+
+    /* Force the location and salary columns into a clean, single vertical block flow stack */
+    .job-right-meta {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding-left: 65px;
+        /* Perfectly aligns content directly under the job text description */
+        width: 100% !important;
+    }
+
+    .job-location-block {
+        align-items: flex-start;
+    }
+
+    .job-salary-block strong {
+        font-size: 1rem;
+        /* Slightly scale down salary font size to fit neatly */
+        display: block;
+    }
+
+    /* --- 2. PAGINATION CONTROLS ENGINE COMPRESSION --- */
+    .pagination-wrapper {
+        margin-top: 3.5rem;
+        width: 100%;
+    }
+
+    .pagination-links {
+        gap: 4px;
+        /* Pull the navigation circles closer together */
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Slightly compress dimensions of numbers to prevent row wrapping */
+    .page-number {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Convert text indicators into smaller compact pill buttons */
+    .page-nav {
+        height: 32px !important;
+        padding: 0 8px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ==========================================================================
    BLOCK 5: PARTNER COMPANIES SECTION (COMPLETE FROM SCRATCH)
    ========================================================================== */
 
@@ -1398,5 +1464,296 @@ ul {
 
     .testimonial-quote-block p {
         font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================================
+   BLOCK 7: STANDALONE CTA BANNER COMPONENT (FROM SCRATCH)
+   ========================================================================== */
+
+/* Isolated container handling background canvas image */
+.cta-banner-wrapper {
+    position: relative;
+    width: 100%;
+
+    /* --- STRICT SPECIFICATION HEIGHT CONSTRAINT --- */
+    height: 176px;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 5;
+
+    /* Flexbox layout to center all inner container contents vertically */
+    display: flex;
+    align-items: center;
+}
+
+/* Unique translucent blue overlay mask layer to avoid global collisions */
+.cta-banner-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Rich translucent blue screen matching the video recording exactly */
+    background: rgba(22, 68, 186, 0.88);
+    z-index: 1;
+}
+
+/* Forces structural items to sit above the translucent blue filter layer */
+.cta-inner-section {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Flex row setup to pull typography left and action trigger button right */
+.cta-flex-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left side layout styling rules */
+.cta-text-content {
+    color: #ffffff;
+}
+
+.cta-text-content h2 {
+    font-size: 1.85rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.5px;
+}
+
+.cta-text-content p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Right side action button customization */
+.btn-cta-signup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbd434;
+    /* Vibrant yellow brand color pulled from video */
+    color: #000000 !important;
+    font-size: 1.05rem;
+    font-weight: 600;
+    height: 48px;
+    width: 255px;
+    padding: 0 2.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta-signup:hover {
+    background-color: #e2be2b;
+}
+
+/* ==========================================================================
+   CTA BANNER LAYER RESPONSIVE TRANSITIONS
+   ========================================================================== */
+
+/* --- Tablet & Medium Screens (991px and below) --- */
+@media (max-width: 991px) {
+    .cta-text-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-text-content p {
+        font-size: 0.95rem;
+    }
+
+    .btn-cta-signup {
+        height: 48px;
+        padding: 0 2rem;
+    }
+}
+
+/* --- Mobile Viewport Stack (767px and below) --- */
+@media (max-width: 767px) {
+
+    /* Collapse the horizontal 176px strip down into an expanding vertical block row */
+    .cta-banner-wrapper {
+        height: auto;
+        padding: 3rem 0;
+    }
+
+    .cta-flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        /* Creates clean breathing room above the button */
+    }
+
+    .btn-cta-signup {
+        width: auto;
+    }
+}
+
+/* ==========================================================================
+   BLOCK 8: MASTER SITE FOOTER (FROM SCRATCH)
+   ========================================================================== */
+
+.site-footer {
+    /* Exact background hex code extracted from your inspect tool panel screenshot */
+    background-color: #242424;
+    width: 100%;
+
+    /* --- CRUCIAL SPECIFICATION: 112PX TOP/BOTTOM PADDING GRID TIE --- */
+    padding: 112px 0;
+
+    box-sizing: border-box;
+}
+
+.site-footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Four-Column Layout Tracker Grid Matrix for Desktop Viewfields */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 5rem;
+}
+
+/* Typography Title Styling inside columns */
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: -0.2px;
+}
+
+/* Navigational link structural lists definitions */
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 0.9rem;
+}
+
+.footer-links-list a {
+    /* Color template font parameter tracking */
+    color: #7f848c;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* --- HOVER INTERACTION TRIGGER 1: INSTANT TEXT UNDERLINE EFFECT --- */
+.footer-links-list a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- THE ROUNDED BRAND SOCIAL ICON MACHINE --- */
+.footer-social-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-bubble-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    /* Base Colorlib blue icon brand layer setup */
+    background-color: #1644ba;
+    color: #ffffff !important;
+
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- HOVER INTERACTION TRIGGER 2: TRANSITION TO WHITE BACKGROUND BUBBLE --- */
+.social-bubble-icon:hover {
+    background-color: #ffffff;
+    color: #1644ba !important;
+    /* Inverts color schema smoothly on cursor touch */
+    transform: translateY(-3px);
+}
+
+/* Base Horizontal Divider Copy Row Layout */
+.footer-copyright-block {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+.footer-copyright-block p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    font-weight: 300;
+}
+
+.footer-copyright-block a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.footer-copyright-block a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-copyright-block i {
+    color: #dc3545;
+    /* Soft glowing red color tint heart icon markup indicator */
+    margin: 0 2px;
+}
+
+
+/* ==========================================================================
+   FOOTER RESPONSIVE OVERRIDES GRID TRANSLATIONS
+   ========================================================================== */
+
+/* --- Tablet Breakpoint Matrix (Under 991px) --- */
+@media (max-width: 991px) {
+    .site-footer {
+        padding: 80px 0;
+        /* Proportionally adjust cushions down under tighter spaces */
+    }
+
+    /* Collapse four columns down into a standard double row 2x2 design matrix */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+}
+
+/* --- Mobile Viewport Row Stacks (Under 575px) --- */
+@media (max-width: 575px) {
+
+    /* Collapse everything down safely into a one column full block line list */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 1.2rem;
     }
 }
