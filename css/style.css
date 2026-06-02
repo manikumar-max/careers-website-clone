@@ -2494,3 +2494,233 @@ ul {
         font-size: 1.2rem;
     }
 }
+
+/* ==========================================================================
+   CONTACT PAGE: INTERACTIVE FORM LAYOUT SYSTEM (FROM SCRATCH)
+   ========================================================================== */
+
+.contact-main-section {
+    background-color: #ffffff;
+    /* Pristine template white baseline canvas */
+    width: 100%;
+
+    /* --- STRICT LAYOUT CODES: 790PX HIGH WITH 112PX BALANCED GRID PADDING --- */
+    height: 790px;
+    padding: 112px 0;
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.contact-main-section .contact-grid-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Flex Row handling asynchronous columns */
+.contact-flex-split-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* --- LEFT SIDE: THE FORM FIELDS ENGINE --- */
+.contact-form-column {
+    width: 55%;
+    /* Spans gracefully over half the container map footprint */
+    flex-shrink: 0;
+}
+
+.contact-form-engine {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Uniform grid line spacing separation between form tiers */
+}
+
+/* Double input horizontal line matrix (First / Last Names row) */
+.form-double-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-double-row .form-field-group {
+    flex: 1;
+}
+
+.form-field-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-field-group label {
+    font-size: 0.95rem;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* The Calibrated input control mechanics */
+.contact-form-control {
+    width: 100%;
+    height: 48px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    /* Soft baseline container stroke border */
+    border-radius: 4px;
+    padding: 0 16px;
+    font-size: 1rem;
+    color: #000000;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Handle specific metrics scaling on the message textbox container */
+.contact-form-control.message-box {
+    height: auto;
+    padding: 14px 16px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Highlighted Focus States */
+.contact-form-control:focus {
+    outline: none;
+    border-color: #1644ba;
+    /* Snaps active to template theme identity blue */
+    box-shadow: 0 0 0 3px rgba(22, 68, 186, 0.1);
+}
+
+/* Transmitting Action Button Specifications */
+.btn-contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1644ba;
+    color: #ffffff !important;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 48px;
+    padding: 0 2.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-contact-submit:hover {
+    background-color: #113492;
+    /* Rich dark navy overlay shade on hover */
+    transform: translateY(-1px);
+}
+
+
+/* --- RIGHT SIDE: PHYSICAL OFFICE CONTACT META COLUMN --- */
+.contact-details-column {
+    width: 38%;
+    /* Balances elegantly on right side fields */
+    flex-shrink: 0;
+}
+
+/* Padded white context info panel layout card */
+.info-content-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Header structural labels */
+.info-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 6px;
+    text-transform: capitalize;
+}
+
+.info-text {
+    font-size: 1rem;
+    color: #7f848c;
+    /* Classic slate body copy font tone */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Connected hyper-link transitions settings */
+.info-anchor-link {
+    color: #1644ba;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-anchor-link:hover {
+    color: #113492;
+    text-decoration: underline;
+    /* Standard template hover feedback toggle */
+}
+
+
+/* ==========================================================================
+   CONTACT SECTION VIEWPORT BREAKPOINT OVERRIDES
+   ========================================================================== */
+
+/* --- Tablet / Landscape Layout Modifiers (Under 991px wide) --- */
+@media (max-width: 991px) {
+    .contact-main-section {
+        height: auto;
+        /* Dissolves hard design layout boundaries under narrow columns */
+        padding: 80px 0;
+    }
+
+    /* Collapse horizontal dual streams down cleanly into a vertical list flow */
+    .contact-flex-split-row {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact-form-column,
+    .contact-details-column {
+        width: 100%;
+        /* Spans full lateral bounds uniformly across tablets */
+    }
+
+    .info-content-card {
+        padding: 0;
+        /* Drops deep inset box cushions to align flush with form lines */
+    }
+}
+
+/* --- Mobile Viewfield Row Modifiers (Under 575px wide) --- */
+@media (max-width: 575px) {
+    .contact-main-section {
+        padding: 60px 0;
+    }
+
+    /* Forces the First Name / Last Name split row into individual block lines */
+    .form-double-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-contact-submit {
+        width: 100%;
+        /* Full span action buttons on extra close display panels */
+    }
+}
