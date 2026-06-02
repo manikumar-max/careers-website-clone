@@ -579,3 +579,824 @@ ul {
         font-size: 2.4rem;
     }
 }
+
+/* ==========================================================================
+   BLOCK 4: RE-CALIBRATED COMPONENT SYSTEM
+   ========================================================================== */
+
+.job-listings-section {
+    background-color: #ffffff;
+    padding: 6rem 0;
+    width: 100%;
+}
+
+/* Container limits horizontal reach to match the video layout alignment */
+.job-listings-section .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.listings-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.listings-header h2 {
+    font-size: 2.25rem;
+    color: #212529;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* This grid container bounds borders within container constraints */
+.job-listings-stack {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #f0f1f3;
+}
+
+.job-row-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    /* Padding inside row, keeps bottom borders clean */
+    border-bottom: 1px solid #f0f1f3;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.job-row-card:hover {
+    background-color: #fafbfc;
+}
+
+.job-left-meta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.company-logo-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.company-logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.job-info-details h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 6px 0;
+}
+
+.job-title-link {
+    color: #1644ba;
+    transition: color 0.2s ease;
+}
+
+.job-title-link:hover {
+    color: #0d2c80;
+}
+
+.job-publisher-meta {
+    font-size: 0.9rem;
+    color: #7f848c;
+}
+
+.job-publisher-meta strong {
+    color: #212529;
+}
+
+.category-tag {
+    color: #1644ba;
+}
+
+/* --- RE-ENGINEERED SOLID BADGES SYSTEM WITH WHITE TEXT --- */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 4px;
+    color: #ffffff !important;
+    /* Forces solid white copy typography */
+    text-transform: capitalize;
+}
+
+/* Vibrant background weights pulled directly from colorlib screenshots */
+.badge-fulltime {
+    background-color: #f1c40f;
+}
+
+/* Solid Golden Yellow */
+.badge-parttime {
+    background-color: #2ecc71;
+}
+
+/* Solid Emerald Green */
+.badge-freelancer {
+    background-color: #2980b9;
+}
+
+/* Solid Soft Brand Blue */
+
+.job-right-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    gap: 20px;
+}
+
+.job-location-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-city {
+    font-size: 1.05rem;
+    color: #212529;
+    font-weight: 400;
+}
+
+.location-country {
+    font-size: 0.88rem;
+    color: #adb5bd;
+}
+
+.job-salary-block strong {
+    font-size: 1.1rem;
+    color: #212529;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   PAGINATION BLOCK ENGINE (PERFECT CIRCLES RE-CALIBRATION)
+   ========================================================================== */
+.pagination-wrapper {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    /* Matches screenshot left alignment setup */
+}
+
+.pagination-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* General button scaling rule */
+.pagination-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* --- THE CIRCLE ENGINE FIX --- */
+.page-number {
+    width: 40px;
+    /* Equal width and height constraint */
+    height: 40px;
+    border-radius: 50%;
+    /* Pure geometric circle configuration */
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.page-number:hover,
+.page-number.active {
+    background-color: #1644ba;
+    color: #ffffff !important;
+}
+
+/* Rounded rectangle layout framework specific to text navigators */
+.page-nav {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #1644ba;
+}
+
+.page-nav:hover {
+    background-color: #1644ba;
+    color: #ffffff !important;
+    border-color: #1644ba;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN ADAPTATIONS
+   ========================================================================== */
+@media (max-width: 991px) {
+    .job-right-meta {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .job-row-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .job-left-meta {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .job-right-meta {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 60px;
+        padding-left: 80px;
+    }
+}
+
+/* ==========================================================================
+   BLOCK 5: PARTNER COMPANIES SECTION (COMPLETE FROM SCRATCH)
+   ========================================================================== */
+
+/* Main Section Wrapper Enclosure */
+.partners-section {
+    background-color: #ffffff;
+    width: 100%;
+
+    /* Exact template canvas block height specification */
+    height: 351px;
+
+    /* Horizontal boundary division border separator line */
+    border-top: 1px solid #f0f1f3;
+
+    /* Pure Flexbox vertical and horizontal alignment system */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Internal Layout Grid Container Constraints */
+.partners-section .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography Header Stack Area */
+.partners-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.partners-header h2 {
+    font-size: 2.25rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+/* Large and prominent template copy typography style */
+.partners-header p {
+    font-size: 1.15rem;
+    color: #7f848c;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Brand Grid Row Layout Track Elements */
+.partners-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Individual Vector Logo Bounding Frame Boxes */
+.partner-logo-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+/* Core SVG Asset Scaling Rules */
+.partner-logo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- THE LOGO BALANCE SYSTEM --- */
+/* Mailchimp (1st child) and Visa (4th child) maintain crisp full scale */
+.partner-logo-item:nth-child(1) img,
+.partner-logo-item:nth-child(4) img {
+    transform: scale(1);
+}
+
+/* PayPal (2nd child) and Stripe (3rd child) compressed 20% to look uniform */
+.partner-logo-item:nth-child(2) img,
+.partner-logo-item:nth-child(3) img {
+    transform: scale(0.8);
+}
+
+/* Interactive floating responsive hover state feedback */
+.partner-logo-item:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   PARTNER BRAND SECTION MOBILE RESPONSIVE INTERPOLATIONS
+   ========================================================================== */
+
+/* --- Tablet Breakpoint Interface (Under 991px) --- */
+@media (max-width: 991px) {
+    .partners-section {
+        height: auto;
+        /* Drops fixed ceiling so content scales safely */
+        padding: 5rem 0;
+    }
+}
+
+/* --- Smart Phone Viewport Stack (Under 767px) --- */
+@media (max-width: 767px) {
+    .partners-header h2 {
+        font-size: 1.85rem;
+    }
+
+    /* Reconfigures horizontal list row into a clean 2x2 grid panel layout matrix */
+    .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+
+    .partner-logo-item {
+        width: 100%;
+        height: 60px;
+    }
+
+    /* Balances vector proportions inside narrower mobile cards */
+    .partner-logo-item:nth-child(2) img,
+    .partner-logo-item:nth-child(3) img {
+        transform: scale(0.85);
+    }
+}
+
+/* ==========================================================================
+   BLOCK 6: PURE CSS TESTIMONIAL CAROUSEL ENGINE (FROM SCRATCH)
+   ========================================================================== */
+
+.testimonial-section {
+    background-color: #f8f9fa;
+    /* Classic soft Colorlib off-white background tint */
+    width: 100%;
+
+    /* --- EXACT SPECIFICATION HEIGHT CONSTRAINT --- */
+    height: 594px;
+
+    position: relative;
+    overflow: hidden;
+
+    /* Center container elements vertically inside the 594px canvas bounding frame */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-section .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Hide the native browser interaction radio inputs completely */
+.slide-radio-trigger {
+    display: none !important;
+}
+
+/* --- THE VIEWPORT TRACK SYSTEM --- */
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Horizontal linear strip slider carrier band */
+.carousel-track-container {
+    display: flex;
+    width: 300%;
+    /* Spans 3 cards wide (100% per slide) */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Premium fluid slide transition timing */
+}
+
+/* Individual Slide Layout Cards */
+.testimonial-slide-card {
+    width: 33.3333%;
+    /* Allocates exactly 1 full viewport width block per item card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+/* --- CHROME ROUND AVATAR PROFILE FRAMES --- */
+.author-avatar-box {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Dynamic avatar background setups. Simply drops in your standard listing images */
+.avatar-one {
+    background-image: url('../images/featured-listing-2.jpg');
+}
+
+.avatar-two {
+    background-image: url('../images/featured-listing-4.jpg');
+}
+
+.avatar-three {
+    background-image: url('../images/featured-listing-5.jpg');
+}
+
+/* --- QUOTE TYPOGRAPHY BLOCKS --- */
+.testimonial-quote-block {
+    max-width: 800px;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+}
+
+.testimonial-quote-block p {
+    font-size: 1.35rem;
+    /* Large, premium readability text styling */
+    font-style: italic;
+    color: #a1a6ae;
+    /* Soft, readable slate-grey color overlay matching recording */
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Author Signature Tags */
+.author-signature {
+    display: block;
+    font-style: normal;
+    font-size: 1.15rem;
+    color: #212529;
+    /* Deep, sharp high-contrast black copy */
+    font-weight: 400;
+}
+
+
+/* ==========================================================================
+   PURE CSS TRANSFORMATION ENGINE MECHANICS
+   ========================================================================== */
+
+/* Slide shifts mathematically calculated by multiplying index values by viewport widths */
+#slide-1:checked~.carousel-viewport .carousel-track-container {
+    transform: translateX(0%);
+}
+
+#slide-2:checked~.carousel-viewport .carousel-track-container {
+    transform: translateX(-33.3333%);
+}
+
+#slide-3:checked~.carousel-viewport .carousel-track-container {
+    transform: translateX(-66.6666%);
+}
+
+
+/* ==========================================================================
+   CAROUSEL NAVIGATION DOTS STYLINGS
+   ========================================================================== */
+.carousel-dots-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 3.5rem;
+    width: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+/* Bounding geometric circle labels acting as custom navigation pills */
+.nav-dot-label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    /* Base inactive grey pill color */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot-label:hover {
+    background-color: #adb5bd;
+}
+
+/* --- THE ACTIVE DOT MARKER OVERRIDES --- */
+#slide-1:checked~.carousel-dots-navigation #dot-link-1,
+#slide-2:checked~.carousel-dots-navigation #dot-link-2,
+#slide-3:checked~.carousel-dots-navigation #dot-link-3 {
+    background-color: #1644ba;
+    /* Deep accent blue indicator matching active states */
+    transform: scale(1.1);
+}
+
+
+/* ==========================================================================
+   CAROUSEL MOBILE BREAKPOINT RESPONSIVENESS
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+    /* Drops fixed constraints on tablet viewports to prevent clipping tall content text */
+    .testimonial-section {
+        height: auto;
+        padding: 5rem 0;
+    }
+
+    .testimonial-quote-block p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial-slide-card {
+        padding: 10px 10px;
+    }
+
+    .author-avatar-box {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.8rem;
+    }
+
+    .testimonial-quote-block p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================================
+   BLOCK 6: AUTOMATIC TESTIMONIAL CAROUSEL MODULE (FROM SCRATCH)
+   ========================================================================== */
+
+.testimonial-section {
+    background-color: #f8f9fa;
+    /* Colorlib light grey section canvas tint */
+    width: 100%;
+
+    /* --- STRICT SPECIFICATION HEIGHT CONSTRAINT --- */
+    height: 594px;
+
+    position: relative;
+    overflow: hidden;
+
+    /* Flexbox Engine to center all elements vertically inside the 594px boundary */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-section .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- THE AUTOMATIC SLIDE CARRIER ENGINE --- */
+.carousel-auto-track {
+    display: flex;
+    width: 200%;
+    /* Spans 2 slides wide (100% per slide) */
+
+    /* Attaches the pure CSS infinite slide translation loop loop */
+    animation: infiniteSlideEngine 10s infinite ease-in-out;
+}
+
+/* Individual Slide Cards Layout */
+.testimonial-slide-card {
+    width: 50%;
+    /* Allocates exactly half of the 200% width row to each person card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px;
+}
+
+/* Profile Image Containers */
+.author-avatar-box {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2.5rem;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Quote Layout Design Proportions */
+.testimonial-quote-block {
+    max-width: 820px;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+}
+
+.testimonial-quote-block p {
+    font-size: 1.35rem;
+    font-style: italic;
+    color: #7f848c;
+    /* Slate color profile tracking your video guide */
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.author-signature {
+    display: block;
+    font-style: normal;
+    font-size: 1.15rem;
+    color: #000000;
+    font-weight: 500;
+}
+
+/* --- AUTOMATIC NAV DOT INDICATORS --- */
+.carousel-dots-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 3.5rem;
+    width: 100%;
+}
+
+.animated-nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    /* Inactive grey */
+    transition: background-color 0.4s ease;
+}
+
+/* Attaches color indicator timings synchronized with slide tracking shifts */
+.dot-one {
+    animation: dotOneColorActive 10s infinite ease-in-out;
+}
+
+.dot-two {
+    animation: dotTwoColorActive 10s infinite ease-in-out;
+}
+
+
+/* ==========================================================================
+   PURE CSS KEYFRAME ANIMATION MATRIX SYSTEMS
+   ========================================================================== */
+
+/* 
+   Handles automated positional layout switches on a 10-second infinite track sequence.
+   0% to 45%   = Slide 1 Active (Richard)
+   50% to 95%  = Slide 2 Active (Chris)
+*/
+@keyframes infiniteSlideEngine {
+
+    0%,
+    45% {
+        transform: translateX(0%);
+    }
+
+    50%,
+    95% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Keyframes synchronized to highlight Dot 1 when Slide 1 is active */
+@keyframes dotOneColorActive {
+
+    0%,
+    45% {
+        background-color: #1644ba;
+        /* Premium active theme blue color */
+    }
+
+    50%,
+    95% {
+        background-color: #dee2e6;
+    }
+
+    100% {
+        background-color: #1644ba;
+    }
+}
+
+/* Keyframes synchronized to highlight Dot 2 when Slide 2 is active */
+@keyframes dotTwoColorActive {
+
+    0%,
+    45% {
+        background-color: #dee2e6;
+    }
+
+    50%,
+    95% {
+        background-color: #1644ba;
+        /* Premium active theme blue color */
+    }
+
+    100% {
+        background-color: #dee2e6;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE VIEWPORT BREAKPOINT OPTIMIZATIONS
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+    /* Release physical heights on small layouts to avoid typography overlaps */
+    .testimonial-section {
+        height: auto;
+        padding: 5rem 0;
+    }
+
+    .testimonial-quote-block p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial-slide-card {
+        padding: 0 10px;
+    }
+
+    .author-avatar-box {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.8rem;
+    }
+
+    .testimonial-quote-block p {
+        font-size: 1.1rem;
+    }
+}
