@@ -1757,3 +1757,354 @@ ul {
         margin-bottom: 1.2rem;
     }
 }
+
+/* ==========================================================================
+   ABOUT PAGE: VIDEO SHOWCASE BLOCK (FROM SCRATCH)
+   ========================================================================== */
+
+.video-showcase-section {
+    background-color: #ffffff;
+    width: 100%;
+
+    /* --- EXACT SPECIFICATION: 112PX TOP CUSHION / 794PX TOTAL ESTIMATED MATRIX --- */
+    padding: 112px 0 0 0;
+    box-sizing: border-box;
+}
+
+.video-showcase-section .about-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Flex Container aligning components horizontally */
+.showcase-flex-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* --- LEFT COLUMN: VIDEO ELEMENT CORE FRAME --- */
+.showcase-video-block {
+    position: relative;
+
+    /* Strict dimensions requested by inspector panel tracking */
+    width: 539px;
+    height: 682px;
+
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* Prevents column from buckling or shrinking */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures your meeting background fits crisp and sharp */
+}
+
+/* Pure CSS Round Play Controller Button Trigger */
+.video-play-trigger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    color: #1644ba;
+    /* Brand theme alignment blue icon color */
+    font-size: 1.3rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 5;
+}
+
+/* Offset correction for play vector alignment inside perfect circle geometry */
+.video-play-trigger i {
+    margin-left: 4px;
+}
+
+/* Hover effect on player button */
+.video-play-trigger:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+    background-color: #1644ba;
+    color: #ffffff;
+}
+
+/* --- RIGHT COLUMN: TYPOGRAPHY DESCRIPTION SYSTEM --- */
+.showcase-text-block {
+    /* Strict dimensions and margins requested by inspector tracking */
+    width: 475px;
+    height: 331px;
+    margin-left: 95px;
+    margin-top: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.showcase-text-block h2 {
+    font-size: 2.25rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Top lead intro paragraph styling definitions */
+.lead-paragraph {
+    font-size: 1.15rem;
+    color: #7f848c;
+    /* Classic slate grey tracking copy color */
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+
+/* Secondary descriptions text layers */
+.body-paragraph {
+    font-size: 0.98rem;
+    color: #a1a6ae;
+    line-height: 1.6;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   VIDEO MODULE RESPONSIVE LAYOUT BREAKPOINTS
+   ========================================================================== */
+
+/* --- Tablet Mode Changes (Under 991px wide) --- */
+@media (max-width: 991px) {
+    .video-showcase-section {
+        padding: 60px 0;
+        /* Scaling down padding boundaries smoothly */
+    }
+
+    /* Collapse side-by-side elements down safely into a clean single vertical flow column */
+    .showcase-flex-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .showcase-video-block {
+        width: 100%;
+        max-width: 539px;
+        height: 500px;
+        /* Limits height under narrow columns to maintain aspect ratio safety */
+    }
+
+    .showcase-text-block {
+        width: 100%;
+        max-width: 539px;
+        height: auto;
+        margin-left: 0;
+        /* Drops horizontal margin gap entirely when stacked */
+    }
+}
+
+/* --- Smart Phone Mode Changes (Under 575px wide) --- */
+@media (max-width: 575px) {
+    .showcase-video-block {
+        height: 380px;
+    }
+
+    .showcase-text-block h2 {
+        font-size: 1.85rem;
+    }
+
+    .video-play-trigger {
+        width: 65px;
+        height: 65px;
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================================
+   ABOUT PAGE: TEAM SHOWCASE BLOCK (FROM SCRATCH)
+   ========================================================================== */
+
+.team-showcase-section {
+    background-color: #ffffff;
+    width: 100%;
+
+    /* --- STRICT SPECIFICATION METRICS --- */
+    height: 1044px;
+    padding: 112px 0;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.team-showcase-section .about-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Section Header Typography */
+.team-section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.team-section-header h2 {
+    font-size: 2.25rem;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+/* Horizontal Row Flex Engine */
+.team-flex-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+}
+
+/* Individual Member Column Block Cards */
+.team-member-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* --- THE IMAGE SPECIFICATION MATRIX FRAME (400px * 400px) --- */
+.member-photo-frame {
+    width: 400px;
+    height: 400px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Details Typography System */
+.member-info-details h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 600;
+    margin: 0 0 0.4rem 0;
+}
+
+.member-role-title {
+    font-size: 0.95rem;
+    color: #b3b3b3;
+    /* Clean muted grey subtitles tone */
+    margin: 0 0 1.5rem 0;
+    text-transform: capitalize;
+}
+
+.member-bio-text {
+    font-size: 1rem;
+    color: #7f848c;
+    /* Soft content paragraph color copy */
+    line-height: 1.7;
+    font-weight: 400;
+    margin: 0 0 2rem 0;
+}
+
+/* --- SOCIAL BUTTON INTERACTIONS MATRIX --- */
+.member-social-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1644ba;
+    /* Light grey unselected bubble */
+    color: #ffffff !important;
+    /* Theme blue identity icon vector color */
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover over icons smooth color swaps */
+.team-social-icon:hover {
+    background-color: #000000;
+    /* Fills active blue */
+    color: #ffffff !important;
+    /* Forces clean white internal glyph code */
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================================
+   TEAM SHOWCASE LAYER MOBILE RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+    /* Release explicit height grid ceilings under narrow responsive viewports */
+    .team-showcase-section {
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .team-flex-grid {
+        gap: 45px;
+    }
+
+    .member-photo-frame {
+        width: 100%;
+        max-width: 400px;
+        height: 380px;
+        /* Adapts height safely */
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Collapse horizontal rows into single-column layout tracks */
+    .team-flex-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .team-member-card {
+        width: 100%;
+        max-width: 400px;
+        /* Keeps the cards beautifully contained */
+    }
+
+    .team-section-header {
+        margin-bottom: 3.5rem;
+    }
+}
