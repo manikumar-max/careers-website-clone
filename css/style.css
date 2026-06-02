@@ -2263,3 +2263,234 @@ ul {
         padding: 60px 0;
     }
 }
+
+/* ==========================================================================
+   BLOG PAGE: COMPREHENSIVE ARTICLE GRID BLOCK (COMPLETE & CORRECTED)
+   ========================================================================== */
+
+.blog-grid-section {
+    background-color: #ffffff;
+    width: 100%;
+
+    /* --- HARD PHYSICAL LAYOUT HEIGHT FIX FROM INSPECTOR CODE --- */
+    height: 1350px;
+    padding: 112px 0;
+
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Evenly paces grid rows away from the bottom footer line navigation */
+}
+
+.blog-grid-section .blog-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Three Column Content Track Container Layout Matrix */
+.blog-posts-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+    /* Strong 50px vertical row separation spacing / 30px lateral split */
+    width: 100%;
+}
+
+.blog-post-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* --- THE EXACT SPECIFICATION THUMBNAIL CONTAINER BOX (349PX * 349PX) --- */
+.post-thumb-holder {
+    width: 349px;
+    height: 349px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.post-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Pinches image assets tightly into square dimension maps */
+}
+
+/* Text Content Wrapper Controls */
+.post-meta-details h3 {
+    margin: 0 0 0.8rem 0;
+    line-height: 1.4;
+}
+
+.post-meta-details h3 a {
+    font-size: 1.35rem;
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Meta Data Information Row Tones */
+.post-metadata {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    /* Clean soft slate gray informational label format */
+    font-weight: 400;
+}
+
+.meta-divider {
+    margin: 0 8px;
+    color: #dee2e6;
+}
+
+.comment-count-link {
+    color: #1644ba;
+    /* Classic active theme blue connection path */
+    text-decoration: none;
+}
+
+.comment-count-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   DYNAMIC COMPONENT INTERACTION STATES
+   ========================================================================== */
+
+/* Post Headline color shift on cursor point */
+.post-meta-details h3 a:hover {
+    color: #1644ba;
+}
+
+/* Photo card soft depth push action on mouse hover overlay */
+.blog-post-card:hover .post-thumb-holder {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================================================
+   BLOG LAYOUT CENTRAL PAGINATION ELEMENT CONTROLS (CORRECTED HOVERS)
+   ========================================================================== */
+
+.blog-pagination-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.blog-pagination-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Dynamic Number Links - FIXED: Default state is solid white background */
+.blog-page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+    /* Adds a clean bounding border for the white pills */
+    box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- FIXED HOVER STATE: White changes to vibrant brand blue --- */
+.blog-page-link:hover {
+    background-color: #1644ba;
+    color: #ffffff !important;
+    border-color: #1644ba;
+}
+
+/* Highlight Indicator Track Override (Stays blue persistently) */
+.blog-page-link.active-link {
+    background-color: #1644ba;
+    color: #ffffff !important;
+    border-color: #1644ba;
+}
+
+/* Previous/Next Command Buttons - FIXED: Default state is solid white background */
+.blog-page-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 1.2rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- FIXED HOVER STATE: Navigation text buttons change to blue --- */
+.blog-page-nav:hover {
+    background-color: #1644ba;
+    color: #ffffff !important;
+    border-color: #1644ba;
+}
+
+
+/* ==========================================================================
+   BLOG BLOCK MEDIA BREAKPOINT RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+
+/* --- Tablet / Landscape Screens Viewport Control (Under 991px wide) --- */
+@media (max-width: 991px) {
+    .blog-grid-section {
+        height: auto;
+        /* Drops physical ceiling limits to keep expanding grid lines safe */
+        padding: 80px 0;
+    }
+
+    /* Adapt grid flow path columns from 3 down into 2 panels */
+    .blog-posts-matrix {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 25px;
+    }
+
+    .post-thumb-holder {
+        width: 100%;
+        /* Spans full column layout safely across mobile screens */
+        height: 320px;
+    }
+}
+
+/* --- Mobile Viewport Row Stack System (Under 575px wide) --- */
+@media (max-width: 575px) {
+    .blog-posts-matrix {
+        grid-template-columns: 1fr;
+        /* Single stacked sequence list layout column */
+        gap: 35px;
+    }
+
+    .post-thumb-holder {
+        height: 280px;
+    }
+
+    .post-meta-details h3 a {
+        font-size: 1.2rem;
+    }
+}
