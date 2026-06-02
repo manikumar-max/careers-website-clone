@@ -2108,3 +2108,158 @@ ul {
         margin-bottom: 3.5rem;
     }
 }
+
+/* ==========================================================================
+   SERVICES PAGE: 6-PART GRID BLOCK (FROM SCRATCH)
+   ========================================================================== */
+
+.services-grid-section {
+    /* Colorlib light background specification hex signature */
+    background-color: #f8f9fa;
+    width: 100%;
+
+    /* --- STRICT LAYOUT SPECIFICATION HEIGHT: 907PX TOTAL (112PX PADDING) --- */
+    height: 907px;
+    padding: 112px 0;
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-grid-section .services-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Master Grid Structure: Clean 3-Column Display for Desktops */
+.services-display-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+/* --- INDIVIDUAL ITEM CARDS (STRICT HEIGHT: 293PX) --- */
+.service-item-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    /* Strips implicit anchor element line underlines */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    /* --- HARD FIXED SPECIFICATION HEIGHT CONSTRAINT --- */
+    height: 293px;
+
+    /* Smooth transition for core lift effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Iconic vector bubble wrapper defaults */
+.service-icon-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #1644ba;
+    /* Clean frame blue stroke border line path */
+    background-color: #1644ba;
+    color: #ffffff;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Typography Headings Layout */
+.service-item-card h3 {
+    font-size: 1.25rem;
+    color: #000000;
+    font-weight: 600;
+    margin: 0 0 0.8rem 0;
+    transition: color 0.3s ease;
+}
+
+/* Description Text Blocks */
+.service-item-card p {
+    font-size: 0.95rem;
+    color: #7f848c;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+
+/* ==========================================================================
+   DYNAMIC INTERACTIVE HOVER ACTIONS MATRIX 
+   ========================================================================== */
+
+.service-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* --- THE HOVER INVERSION FILTER ENGINE (Pulls from video state) --- */
+.service-item-card:hover .service-icon-wrapper {
+    background-color: #ffffff;
+    /* Fills bubble solid blue */
+    color: #1644ba;
+    /* Flips vector glyph crisp white */
+}
+
+.service-item-card:hover h3 {
+    color: #1644ba;
+    /* Title shifts elegantly into theme blue */
+}
+
+
+/* ==========================================================================
+   SERVICES GRID RESPONSIVE TRANSLATIONS OVERRIDES
+   ========================================================================== */
+
+/* --- Tablet Breakpoint Viewports (Under 991px wide) --- */
+@media (max-width: 991px) {
+
+    /* Release hard vertical constraints to handle text modifications safely */
+    .services-grid-section {
+        height: auto;
+        padding: 80px 0;
+    }
+
+    /* Shifts grid matrix layout columns from 3 columns into 2 columns */
+    .services-display-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .service-item-card {
+        height: auto;
+        /* Gives changing text boxes full breathing room */
+        padding: 3rem 2rem;
+    }
+}
+
+/* --- Mobile Phone Stack Viewports (Under 575px wide) --- */
+@media (max-width: 575px) {
+
+    /* Collapse down to an elegant 1-column layout stream list */
+    .services-display-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services-grid-section {
+        padding: 60px 0;
+    }
+}
