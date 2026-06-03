@@ -1087,6 +1087,12 @@ ul {
 }
 
 /* --- CHROME ROUND AVATAR PROFILE FRAMES --- */
+.author-avatar-box {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
 
 .avatar-img {
     width: 100%;
