@@ -1164,6 +1164,9 @@ ul {
     transform: translateX(-66.6666%);
 }
 
+#slide-4:checked~.carousel-viewport .carousel-track-container {
+    transform: translateX(0%);
+}
 
 /* ==========================================================================
    CAROUSEL NAVIGATION DOTS STYLINGS
