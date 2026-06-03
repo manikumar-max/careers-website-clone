@@ -1059,11 +1059,6 @@ ul {
     position: relative;
 }
 
-/* Hide the native browser interaction radio inputs completely */
-.slide-radio-trigger {
-    display: none !important;
-}
-
 /* --- THE VIEWPORT TRACK SYSTEM --- */
 .carousel-viewport {
     width: 100%;
