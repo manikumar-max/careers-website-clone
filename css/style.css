@@ -1483,7 +1483,7 @@ ul {
     background-position: center center;
     background-repeat: no-repeat;
     z-index: 5;
-
+    background-attachment: fixed;
     /* Flexbox layout to center all inner container contents vertically */
     display: flex;
     align-items: center;
