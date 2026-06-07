@@ -9,9 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -67,11 +64,10 @@
             </div>
         </header>
 
-        <!-- BLOCK 2: HERO BANNER & RESPONSIVE JOB SEARCH SECTION -->
-        <section class="home-section bg-image overlay-dark" style="background-image: url('images/hero_1.jpg');">
+        <section class="home-section bg-image overlay-dark"
+            style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920');">
             <div class="container">
 
-                <!-- Hero Text Typography -->
                 <div class="hero-text-block text-center">
                     <h1>A Powerful Career Website Template</h1>
                     <p>Find your dream jobs in our powerful career website template.</p>
@@ -81,12 +77,10 @@
                 <form class="search-jobs-form">
                     <div class="form-grid">
 
-                        <!-- Field 1: Keywords Input -->
                         <div class="form-group icon-input">
                             <input type="text" class="form-control" placeholder="Job title, keywords...">
                         </div>
 
-                        <!-- Field 2: Location Select Box -->
                         <div class="form-group custom-select-wrapper">
                             <select class="form-control">
                                 <option>Anywhere</option>
@@ -96,7 +90,6 @@
                             </select>
                         </div>
 
-                        <!-- Field 3: Job Type Select Box -->
                         <div class="form-group custom-select-wrapper">
                             <select class="form-control">
                                 <option>Part Time</option>
@@ -105,7 +98,6 @@
                             </select>
                         </div>
 
-                        <!-- Field 4: Submit Button Trigger -->
                         <div class="form-group">
                             <button type="submit" class="btn btn-search btn-block">
                                 <i class="fa-solid fa-magnifying-glass"></i> Search Job
@@ -118,7 +110,8 @@
             </div>
         </section>
 
-        <div class="stats-bg-wrapper" style="background-image: url('images/hero_1.jpg');">
+        <div class="stats-bg-wrapper"
+            style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1920');">
             <section class="stats-section">
                 <div class="stats-container">
 
@@ -164,180 +157,215 @@
 
                 <div class="job-listings-stack">
 
-                    <div class="job-row-card">
-                        <div class="job-left-meta">
-                            <div class="company-logo-box">
-                                <img src="images/featured-listing-1.jpg" alt="Logo 1">
+                    <input type="checkbox" id="job-cart-trigger-1" class="job-cart-checkbox">
+                    <label for="job-cart-trigger-1" class="job-cart-click-wrapper">
+                        <div class="job-row-card">
+                            <div class="job-left-meta">
+                                <div class="company-logo-box">
+                                    <img src="images/featured-listing-1.jpg" alt="Logo 1">
+                                </div>
+                                <div class="job-info-details">
+                                    <span class="badge badge-freelancer">Freelancer</span>
+                                    <h3><span class="job-title-link" style="cursor: pointer;">Dropbox Product Designer</span></h3>
+                                    <div class="job-publisher-meta">
+                                        Publisher: <strong>John Stewart</strong> In: <span class="category-tag">Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-info-details">
-                                <span class="badge badge-freelancer">Freelancer</span>
-                                <h3><a href="#" class="job-title-link">Dropbox Product Designer</a></h3>
-                                <div class="job-publisher-meta">
-                                    Publisher: <strong>John Stewart</strong> In: <span
-                                        class="category-tag">Design</span>
+                            <div class="job-right-meta">
+                                <div class="job-location-block">
+                                    <span class="location-city">Melbourn</span>
+                                    <span class="location-country">Australia</span>
+                                </div>
+                                <div class="job-salary-block">
+                                    <strong>$60k &mdash; $100k</strong>
+                                </div>
+                                <div class="cart-status-indicator">
+                                    <i class="fa-solid fa-circle-check"></i> Saved
                                 </div>
                             </div>
                         </div>
-                        <div class="job-right-meta">
-                            <div class="job-location-block">
-                                <span class="location-city">Melbourn</span>
-                                <span class="location-country">Australia</span>
-                            </div>
-                            <div class="job-salary-block">
-                                <strong>$60k &mdash; $100k</strong>
-                            </div>
-                        </div>
-                    </div>
+                    </label>
 
-                    <div class="job-row-card">
-                        <div class="job-left-meta">
-                            <div class="company-logo-box">
-                                <img src="images/featured-listing-2.jpg" alt="Logo 2">
+                    <input type="checkbox" id="job-cart-trigger-2" class="job-cart-checkbox">
+                    <label for="job-cart-trigger-2" class="job-cart-click-wrapper">
+                        <div class="job-row-card">
+                            <div class="job-left-meta">
+                                <div class="company-logo-box">
+                                    <img src="images/featured-listing-2.jpg" alt="Logo 2">
+                                </div>
+                                <div class="job-info-details">
+                                    <span class="badge badge-fulltime">Full-time</span>
+                                    <h3><span class="job-title-link" style="cursor: pointer;">Creative Director in Intercom</span></h3>
+                                    <div class="job-publisher-meta">
+                                        Publisher: <strong>John Stewart</strong> In: <span class="category-tag">Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-info-details">
-                                <span class="badge badge-fulltime">Full-time</span>
-                                <h3><a href="#" class="job-title-link">Creative Director in Intercom</a></h3>
-                                <div class="job-publisher-meta">
-                                    Publisher: <strong>John Stewart</strong> In: <span
-                                        class="category-tag">Design</span>
+                            <div class="job-right-meta">
+                                <div class="job-location-block">
+                                    <span class="location-city">London</span>
+                                    <span class="location-country">United Kingdom</span>
+                                </div>
+                                <div class="job-salary-block">
+                                    <strong>$60k &mdash; $100k</strong>
+                                </div>
+                                <div class="cart-status-indicator">
+                                    <i class="fa-solid fa-circle-check"></i> Saved
                                 </div>
                             </div>
                         </div>
-                        <div class="job-right-meta">
-                            <div class="job-location-block">
-                                <span class="location-city">London</span>
-                                <span class="location-country">United Kingdom</span>
-                            </div>
-                            <div class="job-salary-block">
-                                <strong>$60k &mdash; $100k</strong>
-                            </div>
-                        </div>
-                    </div>
+                    </label>
 
-                    <div class="job-row-card">
-                        <div class="job-left-meta">
-                            <div class="company-logo-box">
-                                <img src="images/featured-listing-3.jpg" alt="Logo 3">
+                    <input type="checkbox" id="job-cart-trigger-3" class="job-cart-checkbox">
+                    <label for="job-cart-trigger-3" class="job-cart-click-wrapper">
+                        <div class="job-row-card">
+                            <div class="job-left-meta">
+                                <div class="company-logo-box">
+                                    <img src="images/featured-listing-3.jpg" alt="Logo 3">
+                                </div>
+                                <div class="job-info-details">
+                                    <span class="badge badge-parttime">Part-time</span>
+                                    <h3><span class="job-title-link" style="cursor: pointer;">FullStack Developer in Shopify</span></h3>
+                                    <div class="job-publisher-meta">
+                                        Publisher: <strong>John Stewart</strong> In: <span class="category-tag">Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-info-details">
-                                <span class="badge badge-parttime">Part-time</span>
-                                <h3><a href="#" class="job-title-link">FullStack Developer in Shopify</a></h3>
-                                <div class="job-publisher-meta">
-                                    Publisher: <strong>John Stewart</strong> In: <span
-                                        class="category-tag">Design</span>
+                            <div class="job-right-meta">
+                                <div class="job-location-block">
+                                    <span class="location-city">London</span>
+                                    <span class="location-country">United Kingdom</span>
+                                </div>
+                                <div class="job-salary-block">
+                                    <strong>$60k &mdash; $100k</strong>
+                                </div>
+                                <div class="cart-status-indicator">
+                                    <i class="fa-solid fa-circle-check"></i> Saved
                                 </div>
                             </div>
                         </div>
-                        <div class="job-right-meta">
-                            <div class="job-location-block">
-                                <span class="location-city">London</span>
-                                <span class="location-country">United Kingdom</span>
-                            </div>
-                            <div class="job-salary-block">
-                                <strong>$60k &mdash; $100k</strong>
-                            </div>
-                        </div>
-                    </div>
+                    </label>
 
-                    <div class="job-row-card">
-                        <div class="job-left-meta">
-                            <div class="company-logo-box">
-                                <img src="images/featured-listing-4.jpg" alt="Logo 4">
+                    <input type="checkbox" id="job-cart-trigger-4" class="job-cart-checkbox">
+                    <label for="job-cart-trigger-4" class="job-cart-click-wrapper">
+                        <div class="job-row-card">
+                            <div class="job-left-meta">
+                                <div class="company-logo-box">
+                                    <img src="images/featured-listing-4.jpg" alt="Logo 4">
+                                </div>
+                                <div class="job-info-details">
+                                    <span class="badge badge-parttime">Part-time</span>
+                                    <h3><span class="job-title-link" style="cursor: pointer;">FullStack Developer in Shopify</span></h3>
+                                    <div class="job-publisher-meta">
+                                        Publisher: <strong>John Stewart</strong> In: <span class="category-tag">Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-info-details">
-                                <span class="badge badge-parttime">Part-time</span>
-                                <h3><a href="#" class="job-title-link">FullStack Developer in Shopify</a></h3>
-                                <div class="job-publisher-meta">
-                                    Publisher: <strong>John Stewart</strong> In: <span
-                                        class="category-tag">Design</span>
+                            <div class="job-right-meta">
+                                <div class="job-location-block">
+                                    <span class="location-city">London</span>
+                                    <span class="location-country">United Kingdom</span>
+                                </div>
+                                <div class="job-salary-block">
+                                    <strong>$60k &mdash; $100k</strong>
+                                </div>
+                                <div class="cart-status-indicator">
+                                    <i class="fa-solid fa-circle-check"></i> Saved
                                 </div>
                             </div>
                         </div>
-                        <div class="job-right-meta">
-                            <div class="job-location-block">
-                                <span class="location-city">London</span>
-                                <span class="location-country">United Kingdom</span>
-                            </div>
-                            <div class="job-salary-block">
-                                <strong>$60k &mdash; $100k</strong>
-                            </div>
-                        </div>
-                    </div>
+                    </label>
 
-                    <div class="job-row-card">
-                        <div class="job-left-meta">
-                            <div class="company-logo-box">
-                                <img src="images/featured-listing-3.jpg" alt="Logo 5">
+                    <input type="checkbox" id="job-cart-trigger-5" class="job-cart-checkbox">
+                    <label for="job-cart-trigger-5" class="job-cart-click-wrapper">
+                        <div class="job-row-card">
+                            <div class="job-left-meta">
+                                <div class="company-logo-box">
+                                    <img src="images/featured-listing-3.jpg" alt="Logo 5">
+                                </div>
+                                <div class="job-info-details">
+                                    <span class="badge badge-parttime">Part-time</span>
+                                    <h3><span class="job-title-link" style="cursor: pointer;">FullStack Developer in Shopify</span></h3>
+                                    <div class="job-publisher-meta">
+                                        Publisher: <strong>John Stewart</strong> In: <span class="category-tag">Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-info-details">
-                                <span class="badge badge-parttime">Part-time</span>
-                                <h3><a href="#" class="job-title-link">FullStack Developer in Shopify</a></h3>
-                                <div class="job-publisher-meta">
-                                    Publisher: <strong>John Stewart</strong> In: <span
-                                        class="category-tag">Design</span>
+                            <div class="job-right-meta">
+                                <div class="job-location-block">
+                                    <span class="location-city">London</span>
+                                    <span class="location-country">United Kingdom</span>
+                                </div>
+                                <div class="job-salary-block">
+                                    <strong>$60k &mdash; $100k</strong>
+                                </div>
+                                <div class="cart-status-indicator">
+                                    <i class="fa-solid fa-circle-check"></i> Saved
                                 </div>
                             </div>
                         </div>
-                        <div class="job-right-meta">
-                            <div class="job-location-block">
-                                <span class="location-city">London</span>
-                                <span class="location-country">United Kingdom</span>
-                            </div>
-                            <div class="job-salary-block">
-                                <strong>$60k &mdash; $100k</strong>
-                            </div>
-                        </div>
-                    </div>
+                    </label>
 
-                    <div class="job-row-card">
-                        <div class="job-left-meta">
-                            <div class="company-logo-box">
-                                <img src="images/featured-listing-4.jpg" alt="Logo 6">
+                    <input type="checkbox" id="job-cart-trigger-6" class="job-cart-checkbox">
+                    <label for="job-cart-trigger-6" class="job-cart-click-wrapper">
+                        <div class="job-row-card">
+                            <div class="job-left-meta">
+                                <div class="company-logo-box">
+                                    <img src="images/featured-listing-4.jpg" alt="Logo 6">
+                                </div>
+                                <div class="job-info-details">
+                                    <span class="badge badge-freelancer">Freelancer</span>
+                                    <h3><span class="job-title-link" style="cursor: pointer;">Dropbox Product Designer</span></h3>
+                                    <div class="job-publisher-meta">
+                                        Publisher: <strong>John Stewart</strong> In: <span class="category-tag">Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-info-details">
-                                <span class="badge badge-freelancer">Freelancer</span>
-                                <h3><a href="#" class="job-title-link">Dropbox Product Designer</a></h3>
-                                <div class="job-publisher-meta">
-                                    Publisher: <strong>John Stewart</strong> In: <span
-                                        class="category-tag">Design</span>
+                            <div class="job-right-meta">
+                                <div class="job-location-block">
+                                    <span class="location-city">Melbourn</span>
+                                    <span class="location-country">Australia</span>
+                                </div>
+                                <div class="job-salary-block">
+                                    <strong>$60k &mdash; $100k</strong>
+                                </div>
+                                <div class="cart-status-indicator">
+                                    <i class="fa-solid fa-circle-check"></i> Saved
                                 </div>
                             </div>
                         </div>
-                        <div class="job-right-meta">
-                            <div class="job-location-block">
-                                <span class="location-city">Melbourn</span>
-                                <span class="location-country">Australia</span>
-                            </div>
-                            <div class="job-salary-block">
-                                <strong>$60k &mdash; $100k</strong>
-                            </div>
-                        </div>
-                    </div>
+                    </label>
 
-                    <div class="job-row-card">
-                        <div class="job-left-meta">
-                            <div class="company-logo-box">
-                                <img src="images/featured-listing-5.jpg" alt="Logo 7">
+                    <input type="checkbox" id="job-cart-trigger-7" class="job-cart-checkbox">
+                    <label for="job-cart-trigger-7" class="job-cart-click-wrapper">
+                        <div class="job-row-card">
+                            <div class="job-left-meta">
+                                <div class="company-logo-box">
+                                    <img src="images/featured-listing-5.jpg" alt="Logo 7">
+                                </div>
+                                <div class="job-info-details">
+                                    <span class="badge badge-fulltime">Full-time</span>
+                                    <h3><span class="job-title-link" style="cursor: pointer;">Creative Director in Intercom</span></h3>
+                                    <div class="job-publisher-meta">
+                                        Publisher: <strong>John Stewart</strong> In: <span class="category-tag">Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-info-details">
-                                <span class="badge badge-fulltime">Full-time</span>
-                                <h3><a href="#" class="job-title-link">Creative Director in Intercom</a></h3>
-                                <div class="job-publisher-meta">
-                                    Publisher: <strong>John Stewart</strong> In: <span
-                                        class="category-tag">Design</span>
+                            <div class="job-right-meta">
+                                <div class="job-location-block">
+                                    <span class="location-city">London</span>
+                                    <span class="location-country">United Kingdom</span>
+                                </div>
+                                <div class="job-salary-block">
+                                    <strong>$60k &mdash; $100k</strong>
+                                </div>
+                                <div class="cart-status-indicator">
+                                    <i class="fa-solid fa-circle-check"></i> Saved
                                 </div>
                             </div>
                         </div>
-                        <div class="job-right-meta">
-                            <div class="job-location-block">
-                                <span class="location-city">London</span>
-                                <span class="location-country">United Kingdom</span>
-                            </div>
-                            <div class="job-salary-block">
-                                <strong>$60k &mdash; $100k</strong>
-                            </div>
-                        </div>
-                    </div>
+                    </label>
 
                 </div>
 
@@ -382,15 +410,12 @@
             </div>
         </section>
 
-        <!-- BLOCK 6: PURE HTML/CSS AUTOMATIC INFINITE TESTIMONIAL CAROUSEL -->
         <section class="testimonial-section">
             <div class="container">
 
-                <!-- Main Dynamic Viewport Frame -->
                 <div class="carousel-viewport">
                     <div class="carousel-auto-track">
 
-                        <!-- SLIDE 1: RICHARD ANDERSON (person_1.jpg) -->
                         <div class="testimonial-slide-card">
                             <div class="author-avatar-box">
                                 <img src="images/person_1.jpg" alt="Richard Anderson" class="avatar-img">
@@ -403,7 +428,6 @@
                             </blockquote>
                         </div>
 
-                        <!-- SLIDE 2: CHRIS PETERS (person_2.jpg) -->
                         <div class="testimonial-slide-card">
                             <div class="author-avatar-box">
                                 <img src="images/person_2.jpg" alt="Chris Peters" class="avatar-img">
@@ -419,7 +443,6 @@
                     </div>
                 </div>
 
-                <!-- Pure CSS Animated Indicator Dots (Timed with Keyframes) -->
                 <div class="carousel-dots-navigation">
                     <span class="animated-nav-dot dot-one"></span>
                     <span class="animated-nav-dot dot-two"></span>
@@ -428,7 +451,8 @@
             </div>
         </section>
 
-        <div class="cta-banner-wrapper" style="background-image: url('images/hero_1.jpg');">
+        <div class="cta-banner-wrapper"
+            style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920');">
             <section class="cta-inner-section">
                 <div class="container cta-flex-container">
 

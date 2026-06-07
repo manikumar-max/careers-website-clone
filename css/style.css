@@ -35,6 +35,7 @@ ul {
     left: 0;
     z-index: 1999;
     padding: 1rem 0;
+    animation: headerEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both
 }
 
 .header-container {
@@ -144,6 +145,7 @@ ul {
     text-align: center;
     margin-top: 7rem;
     margin-bottom: 3rem;
+    animation: contentRiseEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero-text-block h1 {
@@ -163,6 +165,7 @@ ul {
 .search-jobs-form {
     width: 100%;
     display: block;
+    animation: contentRiseEntrance 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .form-grid {
@@ -226,6 +229,7 @@ ul {
     align-items: center;
     gap: 8px;
     transition: background-color 0.3s ease;
+    animation: buttonPulseGlow 2.5s infinite ease-in-out;
 }
 
 .btn-search:hover {
@@ -2721,4 +2725,361 @@ ul {
         width: 100%;
         /* Full span action buttons on extra close display panels */
     }
+}
+
+.job-row-card {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-row-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.partner-logo-item img {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+    opacity: 0.6;
+    /* Starts slightly muted */
+}
+
+.partner-logo-item:hover img {
+    transform: scale(1.08);
+    /* Scales logo image element smoothly */
+    opacity: 1;
+    /* Shines fully bright on focus */
+}
+
+.right-cta-menu .btn,
+.btn-search {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right-cta-menu .btn:hover,
+.btn-search:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(22, 68, 186, 0.2);
+}
+
+.search-jobs-form .form-control {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.search-jobs-form .form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(22, 68, 186, 0.15), 0 15px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.site-menu>li>a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.site-menu>li>a::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateX(-50%);
+}
+
+.site-menu>li>a:hover::after,
+.site-menu>li>a.active::after {
+    width: 40%;
+    /* Underline smoothly grows to 40% text width */
+}
+
+/* Paste at the bottom of style.css */
+.badge {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+}
+
+.job-row-card:hover .badge {
+    transform: scale(1.1) rotate(-1deg);
+    /* Playful energetic micro-pop */
+}
+
+@keyframes headerEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contentRiseEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonPulseGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(22, 68, 186, 0.4);
+    }
+
+    70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 12px rgba(22, 68, 186, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(22, 68, 186, 0);
+    }
+}
+
+.job-cart-checkbox {
+    display: none !important;
+}
+
+/* Make our click frame block display cleanly as a full structural width line */
+.job-cart-click-wrapper {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Define the base state adjustments for our status check icon badge */
+.cart-status-indicator {
+    opacity: 0;
+    transform: scale(0.5);
+    color: #2ecc71;
+    /* Vibrant Emerald Green */
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/* ==========================================================================
+   THE TRIGGER MATRIX ACTIONS (WHEN CHECKBOX IS CLICKED / CHECKED)
+   ========================================================================== */
+
+/* 1. When checked, connect the custom cinematic keyframe engine directly to the card */
+/* ==========================================================================
+   INDIVIDUAL JOB CARD INTERACTIVE TRIGGERS MATRIX
+   ========================================================================== */
+
+/* --- CARD 1 TRIGGER: Dropbox Product Designer --- */
+#job-cart-trigger-1:checked~.job-cart-click-wrapper[for="job-cart-trigger-1"] .job-row-card {
+    animation: advancedMoveToCartEngine 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    pointer-events: none;
+}
+
+#job-cart-trigger-1:checked~.job-cart-click-wrapper[for="job-cart-trigger-1"] .cart-status-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- CARD 2 TRIGGER: Creative Director in Intercom --- */
+#job-cart-trigger-2:checked~.job-cart-click-wrapper[for="job-cart-trigger-2"] .job-row-card {
+    animation: advancedMoveToCartEngine 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    pointer-events: none;
+}
+
+#job-cart-trigger-2:checked~.job-cart-click-wrapper[for="job-cart-trigger-2"] .cart-status-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- CARD 3 TRIGGER: FullStack Developer in Shopify (Instance 1) --- */
+#job-cart-trigger-3:checked~.job-cart-click-wrapper[for="job-cart-trigger-3"] .job-row-card {
+    animation: advancedMoveToCartEngine 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    pointer-events: none;
+}
+
+#job-cart-trigger-3:checked~.job-cart-click-wrapper[for="job-cart-trigger-3"] .cart-status-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- CARD 4 TRIGGER: FullStack Developer in Shopify (Instance 2) --- */
+#job-cart-trigger-4:checked~.job-cart-click-wrapper[for="job-cart-trigger-4"] .job-row-card {
+    animation: advancedMoveToCartEngine 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    pointer-events: none;
+}
+
+#job-cart-trigger-4:checked~.job-cart-click-wrapper[for="job-cart-trigger-4"] .cart-status-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- CARD 5 TRIGGER: FullStack Developer in Shopify (Instance 3) --- */
+#job-cart-trigger-5:checked~.job-cart-click-wrapper[for="job-cart-trigger-5"] .job-row-card {
+    animation: advancedMoveToCartEngine 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    pointer-events: none;
+}
+
+#job-cart-trigger-5:checked~.job-cart-click-wrapper[for="job-cart-trigger-5"] .cart-status-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- CARD 6 TRIGGER: Dropbox Product Designer (Instance 2) --- */
+#job-cart-trigger-6:checked~.job-cart-click-wrapper[for="job-cart-trigger-6"] .job-row-card {
+    animation: advancedMoveToCartEngine 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    pointer-events: none;
+}
+
+#job-cart-trigger-6:checked~.job-cart-click-wrapper[for="job-cart-trigger-6"] .cart-status-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- CARD 7 TRIGGER: Creative Director in Intercom (Instance 2) --- */
+#job-cart-trigger-7:checked~.job-cart-click-wrapper[for="job-cart-trigger-7"] .job-row-card {
+    animation: advancedMoveToCartEngine 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    pointer-events: none;
+}
+
+#job-cart-trigger-7:checked~.job-cart-click-wrapper[for="job-cart-trigger-7"] .cart-status-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes advancedMoveToCartEngine {
+    0% {
+        transform: translateX(0) scale(1) rotate(0deg);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    /* STAGE 1: Visual feedback click response. Card pops out and twists slightly */
+    25% {
+        transform: translateY(-8px) scale(1.02) rotate(-1.5deg);
+        box-shadow: 0 20px 35px rgba(22, 68, 186, 0.08);
+        background-color: #f4f7ff;
+        /* Soft accent blue fade */
+    }
+
+    /* STAGE 2: Compression. The card shrinks, shifts down, and prepares to rocket off-screen */
+    50% {
+        transform: translateY(4px) scale(0.95) rotate(1deg);
+        opacity: 0.9;
+    }
+
+    /* STAGE 3: Rocket Fly-Out. The card spins, shrinks to a speck, and flies up into the top-right corner */
+    100% {
+        transform: translateX(120%) translateY(-250px) scale(0.1) rotate(25deg);
+        opacity: 0;
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+        border: none;
+    }
+}
+
+/* ==========================================================================
+   ADVANCED AMBIENT & INTERACTIVE KINETIC ENHANCEMENTS
+   ========================================================================== */
+
+/* --- 1. ZERO-INTERACTION: AMBIENT PULSING GLOW (For Play Buttons) --- */
+@keyframes ambientGlowPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(22, 68, 186, 0.4);
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px rgba(22, 68, 186, 0);
+        transform: translate(-50%, -50%) scale(1.04);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(22, 68, 186, 0);
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Overrides play trigger on about.html to capture the zero-interaction loop */
+.video-play-trigger {
+    animation: ambientGlowPulse 2s infinite ease-in-out;
+}
+
+
+/* --- 2. ZERO-INTERACTION: AMBIENT FLOATING TEXT SLIDE --- */
+@keyframes ambientTextRise {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Attaches automated entrance to all sub-page main title banners */
+.inner-hero-text h1 {
+    animation: ambientTextRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.inner-hero-text p {
+    animation: ambientTextRise 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+
+/* --- 3. INTERACTIVE: THE ROTATING REVEAL CARD EFFECT (For Blog & Teams) --- */
+.blog-post-card,
+.team-member-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+/* On hover, the card pops up, tilts slightly, and creates depth shadow */
+.blog-post-card:hover,
+.team-member-card:hover {
+    transform: translateY(-6px) rotate(0.5deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Clean micro-interaction for images inside interactive cards */
+.post-thumb-holder img,
+.member-photo-frame img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-post-card:hover .post-img,
+.team-member-card:hover .member-img {
+    transform: scale(1.05);
+}
+
+
+/* --- 4. INTERACTIVE: BOUNCING STATUS CHANNELS (For Service Items) --- */
+.service-item-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.service-item-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Adds a quick energetic snap to icons inside service grids */
+.service-icon-wrapper i {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-item-card:hover .service-icon-wrapper i {
+    transform: scale(1.2) rotate(-8deg);
 }
