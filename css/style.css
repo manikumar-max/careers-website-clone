@@ -3083,3 +3083,10 @@ ul {
 .service-item-card:hover .service-icon-wrapper i {
     transform: scale(1.2) rotate(-8deg);
 }
+
+.site-wrap {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
